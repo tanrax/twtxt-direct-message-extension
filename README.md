@@ -179,8 +179,13 @@ Let’s assume two users, `alice` and `bob`, want to communicate privately.
     openssl enc -d -aes-256-cbc -pbkdf2 -iter 100000 -in message_from_bob.enc -out message_from_bob.txt -pass file:shared_key.bin
     ```
 
-   Resulting in:
-   `Hi Alice, let’s meet tomorrow at 5 PM!`
+    Check `message_from_bob.txt` for the decrypted message.
+
+    ```bash
+    cat message_from_bob.txt
+    ```
+
+   Resulting in the plaintext message: `Hi Alice, let’s meet tomorrow at 5 PM!`
 
 ## Security Considerations
 
